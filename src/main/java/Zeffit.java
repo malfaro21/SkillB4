@@ -9,16 +9,19 @@
  */
 public class Zeffit
 {
-    // TODO: add final variables
+    private boolean isAlive;
 
-    // TODO: add instance variable(s)
+
+    private int healthBar;
 
     /**
      * Constructor for objects of class Zeffit
      */
     public Zeffit()
     {
-        // TODO: initialize instance variable(s)
+        healthBar = 4;
+        isAlive = healthBar>0;
+
     }
 
     /**
@@ -27,7 +30,7 @@ public class Zeffit
      */
     public void takesHit()
     {
-        // TODO: replace this line with your code
+        healthBar = healthBar-1;
     }
 
     /**
@@ -37,7 +40,12 @@ public class Zeffit
      */
     public boolean isHitFree()
     {
-        // TODO: replace this line with your code
+        if (healthBar==4)
+            return true;
+        else {
+            return false;
+        }
+
     }
 
     /**
@@ -47,7 +55,12 @@ public class Zeffit
      */
     public boolean isGreen()
     {
-        // TODO: replace this line with your code
+        if (healthBar==3)
+            return true;
+        else {
+            return false;
+        }
+
     }
 
     /**
@@ -57,7 +70,11 @@ public class Zeffit
      */
     public boolean isBlue()
     {
-        // TODO: replace this line with your code
+        if (healthBar==2)
+            return true;
+        else {
+            return false;
+        }
     }
 
     /**
@@ -67,7 +84,11 @@ public class Zeffit
      */
     public boolean isRed()
     {
-        // TODO: replace this line with your code
+        if (healthBar==1)
+            return true;
+        else{
+            return false;
+        }
     }
 
     /**
@@ -77,7 +98,11 @@ public class Zeffit
      */
     public boolean isDead()
     {
-        // TODO: replace this line with your code
+        if (healthBar==0)
+            return true;
+        else{
+            return false;
+        }
     }
 }
 
